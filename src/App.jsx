@@ -10,3 +10,4 @@ const supabase = createClient(
 );
 
 // ... rest of the component (already known)
+export default ConfidenceVote;
