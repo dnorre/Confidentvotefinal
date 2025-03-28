@@ -120,7 +120,15 @@ export default function ConfidenceVote() {
             </div>
           ) : (
             <div className="w-full max-w-xl space-y-4">
+              <div className="text-center space-y-2">
+                <div className="text-xl font-semibold">Share this link:</div>
+                <div className="text-blue-600 underline break-all">
+                  {typeof window !== "undefined" && window.location.href}
+                </div>
+              </div>
+
               <div className="text-lg font-medium">Question: {question}</div>
+
               <input
                 placeholder="Your name"
                 className="border p-2 rounded w-full"
