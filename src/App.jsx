@@ -109,26 +109,13 @@ export default function ConfidenceVote() {
         <>
           {!isVoting ? (
             <div className="w-full max-w-xl space-y-4 pt-6 text-center">
-             <div className="text-center space-y-2">
-  <div className="text-xl font-semibold">Share this link:</div>
-  <div className="flex items-center justify-center gap-2">
-    <span className="text-blue-600 underline break-all">
-      {typeof window !== "undefined" && window.location.href}
-    </span>
-    <button
-      onClick={() => {
-        navigator.clipboard.writeText(window.location.href); // 👈 Kopierar länken
-        setCopied(true);                                     // 👈 Visar "Copied!"
-        setTimeout(() => setCopied(false), 2000);            // 👈 Döljer det efter 2 sek
-      }}
-      title="Copy link"
-      className="hover:text-blue-800"
-    >
-      <ClipboardIcon className="w-5 h-5" /> {/* 👈 Ikonen */}
-    </button>
-    {copied && <span className="text-green-600 text-sm">✔ Copied!</span>} {/* 👈 Texten */}
-  </div>
+
+              //tillbaka
+<div className="text-xl font-semibold">Share this link:</div>
+<div className="text-blue-600 underline break-all">
+  {typeof window !== "undefined" && window.location.href}
 </div>
+              //tillbaka
 
               <button
                 className="text-lg px-8 py-4 rounded-2xl bg-green-600 text-white hover:bg-green-700 transition"
@@ -139,23 +126,18 @@ export default function ConfidenceVote() {
             </div>
           ) : (
             <div className="w-full max-w-xl space-y-4">
-              <div className="text-center space-y-2">
-        <div className="text-center space-y-2">
-  <div className="text-xl font-semibold">Share this link:</div>
-  <div className="flex items-center justify-center gap-2">
-    <span className="text-blue-600 underline break-all">
-      {typeof window !== "undefined" && window.location.href}
-    </span>
-    <button
-      onClick={() => {
-        navigator.clipboard.writeText(window.location.href); // 👈 Kopierar länken
-        setCopied(true);                                     // 👈 Visar "Copied!"
-        setTimeout(() => setCopied(false), 2000);            // 👈 Döljer det efter 2 sek
-      }}
-      title="Copy link"
-      className="hover:text-blue-800"
-    >
-      <ClipboardIcon className="w-5 h-5" /> {/* 👈 Ikonen */}
+
+
+                       //tillbaka     
+ <div className="text-xl font-semibold">Share this link:</div>
+<div className="text-blue-600 underline break-all">
+  {typeof window !== "undefined" && window.location.href}
+</div>
+              //tillbaka
+
+
+
+              
     </button>
     {copied && <span className="text-green-600 text-sm">✔ Copied!</span>} {/* 👈 Texten */}
   </div>
